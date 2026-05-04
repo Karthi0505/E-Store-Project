@@ -1,25 +1,25 @@
 
-.header{
+.header {
   max-width: 100%;
   box-shadow: 5px 5px 20px rgb(45, 192, 136);
 }
 
-.brand{
+.brand {
   color:white;
   margin-left: 2%;
   padding: 0.8em;
   width: 23%;
 }
-.inp-container{
+.inp-container {
   display: flex;
   align-items: center;
 }
-.inp-container input{
+.inp-container input {
   display: inline-block;
   width: 75%;
   height:2rem;
 }
-.inp-container button{
+.inp-container button {
   display: inline-block;
   width: 10%;
   height:2rem;
@@ -28,36 +28,37 @@
   color: rgb(255, 255, 255);
   cursor: pointer;
 }
-.dropdown{
+.dropdown {
   width: 15%;
 }
-.select-btn{
+.select-btn {
   height:2rem;
 }
-.login-container{
+.login-container {
   width: 15%;
   color: white;
   text-align: right;
   margin:0;
 }
-.login-container i,h5{
+.login-container i,
+h5 {
   display: inline-block;
 }
-.login-container a{
+.login-container a {
   text-decoration: none;
   color: white;
 }
-.user-icon{
+.user-icon {
   font-size: 1.3rem;
   color: white;
   margin-right: 10px;
   padding: 0.2em;
   margin-right: 0.4em;
 }
-.cart-wishlist{
+.cart-wishlist {
   margin-left:1em;
 }
-.cart-wishlist ul{
+.cart-wishlist ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -65,12 +66,12 @@
   align-items: center;;
   gap:2em;
 }
-.cart-wishlist .list-icon{
+.cart-wishlist .list-icon {
   width: 15%;
   display:inline-block;
 }
 
-.cart-wishlist .list-icon i{
+.cart-wishlist .list-icon i {
   font-size: 1.3rem;
   color: white;
   cursor: pointer;
