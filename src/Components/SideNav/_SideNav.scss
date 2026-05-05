@@ -1,0 +1,39 @@
+@import '../../Styles/SCSS/_mixins.scss';
+
+.side-nav {
+    margin-top: 1em;
+    padding: 1em;
+    box-shadow:1px 0px 14px 0px rgb(32, 26, 207);
+    border-radius: 1em;
+    height:97%;
+
+    .section-title {
+        padding: 1em;
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
+
+.individual-category {
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .sub-items {
+        text-align: center;
+        margin-bottom: 0.6em;
+        padding-left: 1em;
+    }
+
+    a {
+        text-decoration: none;  
+        color: #333;
+        @include underline-transition(0.5);
+    }
+    
+}

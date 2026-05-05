@@ -1,5 +1,5 @@
-import React from "react";
-import "./TopNav.css";
+import "../TopNav/_TopNav.scss"
+import "../../Styles/SCSS/_varibales.scss"
 
 function TopNav() {
   return (

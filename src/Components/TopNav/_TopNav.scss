@@ -1,3 +1,4 @@
+@import '../../Styles/SCSS/_varibales.scss';
 
 .header {
   max-width: 100%;
@@ -17,12 +18,12 @@
 .inp-container input {
   display: inline-block;
   width: 75%;
-  height:2rem;
+  height:$element-height;
 }
 .inp-container button {
   display: inline-block;
   width: 10%;
-  height:2rem;
+  height:$element-height;
   border: none;
   background-color: #70a0d8;
   color: rgb(255, 255, 255);
@@ -32,7 +33,7 @@
   width: 15%;
 }
 .select-btn {
-  height:2rem;
+  height:$element-height;
 }
 .login-container {
   width: 15%;
@@ -49,7 +50,7 @@ h5 {
   color: white;
 }
 .user-icon {
-  font-size: 1.3rem;
+  font-size: $icon-font-size;
   color: white;
   margin-right: 10px;
   padding: 0.2em;
@@ -72,7 +73,7 @@ h5 {
 }
 
 .cart-wishlist .list-icon i {
-  font-size: 1.3rem;
+  font-size: $icon-font-size;
   color: white;
   cursor: pointer;
   list-style: none;
