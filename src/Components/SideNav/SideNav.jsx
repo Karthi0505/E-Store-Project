@@ -1,4 +1,3 @@
-
 import "./_SideNav.scss"
 
 function SideNav() {
