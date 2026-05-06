@@ -1,0 +1,24 @@
+@import '../../Styles/SCSS/_mixins.scss';
+
+.cat-nav-container {
+    background-color: #84cee9;
+    max-width: 100%;
+    border-bottom: 1px solid #444444;
+
+    .list-items {
+        list-style: none;
+        display: inline-block;
+        margin: 0.2em 1em;
+        padding: 0.4em;
+        height: 2.5em;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: 800;
+        height: 1.8em;
+        font-size: 1em;
+        @include underline-transition(1.1);
+    }
+}
