@@ -39,8 +39,10 @@ const initialState = [
       img: Shop6,
     },
   ];
+
 const productSlice = createSlice({
     name: "Product",
     initialState
 });
+
 export default productSlice;
