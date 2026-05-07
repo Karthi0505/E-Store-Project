@@ -1,14 +1,16 @@
 import './_CatNav.scss'
 import '../../Styles/SCSS/_mixins.scss'
+import { useSelector } from 'react-redux'
+import categorySlice from '../../Store/Slice/CategorySlice/CategorySlice'
 
 function CatNav() {
+    const categories = useSelector(categorySlice.getInitialState)
     return (
         <div className='cat-nav-container container'>
             <ul>
-                <li className='list-items'><a href="#">Women</a></li>
-                <li className='list-items'><a href="#">Men</a></li>
-                <li className='list-items'><a href="#">Kids</a></li>
-                <li className='list-items'><a href="#">Best offers</a></li>
+                {categories.map((category) => (
+                    <li className='list-items'><a href="#">{category}</a></li>
+                ))}
             </ul>
         </div>
     )
