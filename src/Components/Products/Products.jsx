@@ -1,56 +1,9 @@
 import "../Products/_Products.scss";
-
-import Shop1 from "../../assets/Shop1.jpeg";
-
-import Shop2 from "../../assets/Shop2.jpeg";
-
-import Shop3 from "../../assets/Shop3.jpeg";
-
-import Shop4 from "../../assets/Shop4.jpeg";
-
-import Shop5 from "../../assets/Shop5.jpeg";
-
-import Shop6 from "../../assets/Shop6.jpeg";
+import productSlice from "../../Store/Slice/ProductSlice/ProductSlice";
+import { useSelector } from "react-redux";
 
 export default function Products() {
-  const productData = [
-    {
-      id: 1,
-      pName: "Leather Jacket",
-      pPrice: 45,
-      img: Shop1,
-    },
-    {
-      id: 2,
-      pName: "Watch",
-      pPrice: 50,
-      img: Shop2,
-    },
-    {
-      id: 3,
-      pName: "Sunglass",
-      pPrice: 20,
-      img: Shop3,
-    },
-    {
-      id: 4,
-      pName: "Bag",
-      pPrice: 10,
-      img: Shop4,
-    },
-    {
-      id: 5,
-      pName: "Denim",
-      pPrice: 45,
-      img: Shop5,
-    },
-    {
-      id: 6,
-      pName: "Leather Jacket",
-      pPrice: 100,
-      img: Shop6,
-    },
-  ];
+  const productData = useSelector(productSlice.getInitialState);
 
   return (
     <div className="product-container">
