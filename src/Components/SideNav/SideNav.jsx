@@ -1,10 +1,16 @@
-import { useSelector } from "react-redux";
-import accordionCatSlice from "../../Store/Slice/AccordionSlice/AccordianCatSlice";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getCategories } from "../../Redux/Category/CategorySlice/Action";
 import "./_SideNav.scss"
 
 function SideNav() {
 
-    const accordionData = useSelector(accordionCatSlice.getInitialState);
+    const accordionData = useSelector(state => state.categoryReducer.categories);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getCategories());
+    }, [dispatch]);
        
     return (
         <div className='side-nav'>
@@ -13,9 +19,11 @@ function SideNav() {
             </div>
             <div className='accordion'>
                 {
-                    accordionData.map((accordionCategory, key)=>{
+                    accordionData
+                    .filter(accordionCategory => accordionCategory.parent_category_id === null)
+                    .map((accordionCategory, key)=>{
                         return (
-                            <div key={accordionCategory.category} className='accordion-item individual-category'>
+                            <div key={accordionCategory.id || accordionCategory.category_id} className='accordion-item individual-category'>
                                 <div className='accordion-header'>
                                     <button type="button" className='accordion-button' data-bs-toggle="collapse" data-bs-target={"#collapse" + key}>
                                         <div className='category-title'>
@@ -26,9 +34,11 @@ function SideNav() {
                                 <div className='accordion-collapse collapse show' id={'collapse' + key}>
                                     <div className='accordion-body'>
                                         <ul>
-                                            {accordionCategory.items.map((items)=>{
+                                            {accordionData
+                                            .filter(subCategory => subCategory.parent_category_id === (accordionCategory.id || accordionCategory.category_id))
+                                            .map((subCategory)=>{
                                                 return (
-                                                    <li key={items} className='sub-items'><a href="#">{items}</a></li>
+                                                    <li key={subCategory.id || subCategory.category_id} className='sub-items'><a href="#">{subCategory.category}</a></li>
                                                 )
                                             })}
                                         </ul>
