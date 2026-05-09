@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState =[
+const initialState = [
     {
         category: "Men",
         items: ["Shirts", "Tshirts", "Jeans", "Trousers", "Jackets"]
