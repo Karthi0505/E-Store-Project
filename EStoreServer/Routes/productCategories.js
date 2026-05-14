@@ -25,4 +25,17 @@ productcategories.get("/", (req, res) => {
   });
 });
 
+productcategories.get("/getProducts", (req, res) => {
+  let productData;
+
+  pool.query("SELECT * FROM products", (err, rows ) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      productData = rows;
+      res.status(200).send(productData);
+    }
+  });
+});
+
 module.exports = productcategories;
