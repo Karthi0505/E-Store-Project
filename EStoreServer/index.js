@@ -5,7 +5,7 @@ const cors = require("cors");
 
 app.use(cors());
 
-app.use("/productCategories",productcategories)
+app.use("/productCategories", productcategories);
 
 const PORT = 5001;
 

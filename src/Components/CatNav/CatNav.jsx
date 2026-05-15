@@ -6,7 +6,6 @@ import { getCategories } from '../../Redux/Category/CategorySlice/Action'
 
 function CatNav() {
     const categories = useSelector(state => state.categoryReducer.categories)
-    console.log(categories)
 
     const dispatch = useDispatch()
 
