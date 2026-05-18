@@ -3,7 +3,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import './App.css'
 import TopNav from './Components/TopNav/TopNav'
 import CatNav from './Components/CatNav/CatNav'
-import MainComponent from './Components/MainComponent/MainComponent'
+import LandingPage from './Components/LandingPage'
+import { Routes, Route } from 'react-router-dom'
+import ProductDetails from './Components/ProductDetails/ProductDetails'
 
 function App() {
 
@@ -11,7 +13,12 @@ function App() {
     <div className='App'>
       <TopNav />
       <CatNav />
-      <MainComponent />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/ProductDetails" element={<ProductDetails />} />
+      </Routes>
+        
 
     </div>
   )
