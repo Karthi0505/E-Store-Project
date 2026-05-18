@@ -1,4 +1,3 @@
-
 import "./_MainComponent.scss"
 import SideNav from '../SideNav/SideNav'
 import Products from '../Products/Products'

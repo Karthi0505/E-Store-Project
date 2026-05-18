@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategories } from "../../Redux/Category/CategorySlice/Action";
 import "./_SideNav.scss"
+import { filterProducts } from "../../Redux/Product/ProductSlice/prdSlice";
 
 function SideNav() {
 
@@ -12,6 +13,9 @@ function SideNav() {
         dispatch(getCategories());
     }, [dispatch]);
        
+    const filterData = (selectedCategory) => {
+        dispatch(filterProducts)
+    }
     return (
         <div className='side-nav'>
             <div className='section-title'>
@@ -38,7 +42,7 @@ function SideNav() {
                                             .filter(subCategory => subCategory.parent_category_id === (accordionCategory.id || accordionCategory.category_id))
                                             .map((subCategory)=>{
                                                 return (
-                                                    <li key={subCategory.id || subCategory.category_id} className='sub-items'><a href="#">{subCategory.category}</a></li>
+                                                    <li key={subCategory.id || subCategory.category_id} className='sub-items'><a href="#" onClick={()=>filterData(subCategory)}>{subCategory.category}</a></li>
                                                 )
                                             })}
                                         </ul>

@@ -3,6 +3,7 @@ import { getProducts } from "../ProductAction";
 
 const initialState = {
   products: [],
+  selectedCategoryId: null,
   status: "idle",
   error: "",
 };
@@ -10,7 +11,11 @@ const initialState = {
 const productSlice = createSlice({
   name: "Product",
   initialState,
-  reducers: {},
+  reducers: {
+    filterProducts: (state, action) => {
+      state.selectedCategoryId = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getProducts.pending, (state) => {
       state.status = "loading";
@@ -26,4 +31,5 @@ const productSlice = createSlice({
   },
 });
 
+export const { filterProducts } = productSlice.actions;
 export default productSlice.reducer;
