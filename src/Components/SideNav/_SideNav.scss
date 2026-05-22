@@ -35,5 +35,12 @@
         color: #333;
         @include underline-transition(0.5);
     }
-    
-}
+    .price-filter-container {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 1em;
+    }
+
+}   

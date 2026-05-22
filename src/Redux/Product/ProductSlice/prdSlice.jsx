@@ -3,6 +3,7 @@ import { getProducts } from "../ProductAction";
 
 const initialState = {
   products: [],
+  selectedCategoryId: null,
   status: "idle",
   error: "",
 };
@@ -10,7 +11,19 @@ const initialState = {
 const productSlice = createSlice({
   name: "Product",
   initialState,
-  reducers: {},
+  reducers: {
+    filterProducts: (state, action) => {
+      state.selectedCategoryId = action.payload;
+    },
+    filterByPrice: (state, action) => {
+      const filteredData = action.payload.products.filter(
+        (elem) => elem.price >= action.payload.min && elem.price <= action.payload.max
+      );
+      state.products = filteredData;
+      state.minPrice = action.payload.min;
+      state.maxPrice = action.payload.max;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getProducts.pending, (state) => {
       state.status = "loading";
@@ -26,4 +39,5 @@ const productSlice = createSlice({
   },
 });
 
+export const { filterProducts, filterByPrice } = productSlice.actions;
 export default productSlice.reducer;
