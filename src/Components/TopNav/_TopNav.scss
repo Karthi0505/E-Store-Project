@@ -1,0 +1,98 @@
+@import '../../Styles/SCSS/_varibales.scss';
+
+.header {
+  max-width: 100%;
+  box-shadow: 5px 5px 20px rgb(45, 192, 136);
+}
+
+.brand {
+  color:white;
+  margin-left: 2%;
+  padding: 0.8em;
+  width: 23%;
+}
+.inp-container {
+  display: flex;
+  align-items: center;
+}
+.inp-container input {
+  display: inline-block;
+  width: 75%;
+  height:$element-height;
+}
+.inp-container button {
+  display: inline-block;
+  width: 10%;
+  height:$element-height;
+  border: none;
+  background-color: #70a0d8;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.dropdown {
+  width: 15%;
+}
+.select-btn {
+  height:$element-height;
+}
+.login-container {
+  width: 15%;
+  color: white;
+  text-align: right;
+  margin:0;
+}
+.login-container i,
+h5 {
+  display: inline-block;
+}
+.login-container a {
+  text-decoration: none;
+  color: white;
+}
+.user-icon {
+  font-size: $icon-font-size;
+  color: white;
+  margin-right: 10px;
+  padding: 0.2em;
+  margin-right: 0.4em;
+}
+.cart-wishlist {
+  margin-left:1em;
+}
+.cart-wishlist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;;
+  gap:2em;
+}
+.cart-wishlist .list-icon {
+  width: 15%;
+  display:inline-block;
+  position: relative;
+}
+
+.cart-wishlist .list-icon i {
+  font-size: $icon-font-size;
+  color: white;
+  cursor: pointer;
+  list-style: none;
+  margin-right:0.5em;
+  display:inline-block;
+}
+
+.cart-item-count {
+  color: black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: gold;
+}
