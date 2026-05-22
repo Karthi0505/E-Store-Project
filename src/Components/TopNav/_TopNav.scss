@@ -36,7 +36,7 @@
   height:$element-height;
 }
 .login-container {
-  width: 15%;
+  width: 18%;
   color: white;
   text-align: right;
   margin:0;
@@ -48,6 +48,47 @@ h5 {
 .login-container a {
   text-decoration: none;
   color: white;
+}
+.google-login-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  span {
+    font-size: 0.8rem;
+    color: #fff;
+  }
+}
+.user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5em;
+
+  img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  span {
+    max-width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+  }
+
+  button {
+    padding: 0.35em 0.7em;
+    border: none;
+    border-radius: 0.4em;
+    background-color: #ffc107;
+    color: #222;
+    font-weight: 700;
+    cursor: pointer;
+  }
 }
 .user-icon {
   font-size: $icon-font-size;
