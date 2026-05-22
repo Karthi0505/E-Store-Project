@@ -70,6 +70,7 @@ h5 {
 .cart-wishlist .list-icon {
   width: 15%;
   display:inline-block;
+  position: relative;
 }
 
 .cart-wishlist .list-icon i {
@@ -79,4 +80,19 @@ h5 {
   list-style: none;
   margin-right:0.5em;
   display:inline-block;
+}
+
+.cart-item-count {
+  color: black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: gold;
 }
