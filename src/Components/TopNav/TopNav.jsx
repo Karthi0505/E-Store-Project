@@ -1,6 +1,7 @@
 import "../TopNav/_TopNav.scss"
 import "../../Styles/SCSS/_varibales.scss"
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function TopNav() {
   const cartItemCount = useSelector(state => state.cartReducer.totalItems);
@@ -38,6 +39,7 @@ function TopNav() {
             <li className="list-icon">
               <i className="fa fa-heart" />
             </li>
+            <Link to="/cart">
             <li className="list-icon">
               <i className="fa fa-shopping-cart" />
               {cartItemCount !== 0 && (
@@ -46,6 +48,7 @@ function TopNav() {
                 </div>
               )}
             </li>
+            </Link>
           </ul>
         </div>
       </div>

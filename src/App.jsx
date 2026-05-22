@@ -6,6 +6,7 @@ import CatNav from './Components/CatNav/CatNav'
 import LandingPage from './Components/LandingPage'
 import { Routes, Route } from 'react-router-dom'
 import ProductDetails from './Components/ProductDetails/ProductDetails'
+import Cart from './Components/Cart/Cart'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/ProductDetails" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
         
 
